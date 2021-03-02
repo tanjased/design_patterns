@@ -2,3 +2,8 @@ Single Responsibility Principle. (Separation of Concern)
 
 If you have a class, the class should have its primary responsibility and shouldn't take other secondary responsibilities.
 For example, it's better to keep save/load responsibilities in a separate class, not inside a specific one, because this functionality might be used/changed by different classes and there will be no need to go to each class and change it inside it.  
+
+
+Notes:
+
+`@staticmethod`

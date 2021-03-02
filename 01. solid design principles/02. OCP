@@ -1,0 +1,69 @@
+Open-Closed Principle
+
+When you add a new functionality, you add it via extension, not via modification. 
+OPC = open for extension, closed for modification.
+
+The example with a filter option by size and color. You should separate each filter parameter (size, color, both etc) to a new method, instead of putting it all into one and constantly modifying it.
+
+
+Notes:
+
+`import enum ` This package provides a module for robust enumerations in Python.
+
+`if ... yield`  
+
+When you create a list, you can read its items one by one. Reading its items one by one is called iteration:
+
+>>> mylist = [1, 2, 3]
+>>> for i in mylist:
+...    print(i)
+
+mylist is an iterable. When you use a list comprehension, you create a list, and so an iterable:
+
+>>> mylist = [x*x for x in range(3)]
+>>> for i in mylist:
+...    print(i)
+
+Generators are iterators, a kind of iterable **you can only iterate over once**. Generators do not store all the values in memory, **they generate the values on the fly**:
+It is just the same except you used `()` instead of `[]`. BUT, you cannot perform `for i in mygenerator` a second time since generators can only be used once: they calculate 0, then forget about it and calculate 1, and end calculating 4, one by one.
+>>> mygenerator = (x*x for x in range(3))
+>>> for i in mygenerator:
+...    print(i)
+
+`yield` is a keyword that is used like `return`, except the function will return a generator.
+
+>>> def createGenerator():
+...    mylist = range(3)
+...    for i in mylist:
+...        yield i*i
+...
+>>> mygenerator = createGenerator() # create a generator
+>>> print(mygenerator) # mygenerator is an object!
+<generator object createGenerator at 0xb7555c34>
+>>> for i in mygenerator:
+...     print(i)
+0
+1
+4
+
+_LINK:_ https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do
+ 
+\ we have a function. we iterate through results of these function, not inside it as with a for loop and return 
+
+`my_nums = def square_nums(nums):
+    for i in nums: 
+        yield (i*i)`
+
+OR
+
+`my_nums = (i*i for i in [1,2,3,4,5])`
+
+`for num in my_nums:
+    print num`
+
+
+
+
+ENTERPRISE PATTERNS
+SPECIFICATION
+You always extend class' functionality not modify. **_Inherit from other classes._**
