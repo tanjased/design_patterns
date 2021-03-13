@@ -60,5 +60,3 @@ if __name__ == '__main__':
 
 ## factory is a class full of factory methods (not necessarily static ones) which allow you to create an object!
 
-
-
