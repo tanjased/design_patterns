@@ -11,3 +11,9 @@ Why do we need **factories**?
     
 
 _**FACTORY**_ is a component responsible for wholesale (not piecewise) creation of objects
+
+
+It's typically any method which creates an object.
+
+
+      `
