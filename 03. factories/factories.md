@@ -1,3 +1,5 @@
+**Factory method** is a static method which creates objects
+
 Why do we need **factories**?
 - object creation logic becomes too convoluted
 - initializer is not descriptive
