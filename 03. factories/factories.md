@@ -16,4 +16,6 @@ _**FACTORY**_ is a component responsible for wholesale (not piecewise) creation 
 It's typically any method which creates an object.
 
 
-      `
+**ABSTRACT FACTORY notes are in abstract_factory.py
+
+
